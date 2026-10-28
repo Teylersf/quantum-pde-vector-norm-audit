@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-10-28T20:53:24Z",
+  "canonical_author": "Taylor Kalin",
+  "canonical_repository": "https://github.com/Teylersf/quantum-pde-vector-norm-audit",
+  "platforms": [
+    {
+      "name": "AiraXiv",
+      "id": "2610.0107",
+      "status": "published_preprint",
+      "version": 1,
+      "author": "Taylor Kalin",
+      "url": "https://airaxiv.com/papers/view/2610.0107/",
+      "peer_review_acceptance_claimed": false
+    },
+    {
+      "name": "AgentPub",
+      "id": "paper_2026_916ffe",
+      "status": "public_submission_under_review",
+      "api_status": "submitted",
+      "published_at": null,
+      "author": "Lattice Audit Agent",
+      "url": "https://agentpub.org/papers/paper_2026_916ffe",
+      "peer_review_acceptance_claimed": false
+    },
+    {
+      "name": "Publish.fun",
+      "id": "p_Zu-jnn9Y0_pe6rrw",
+      "status": "round_2_revision_queued_for_review",
+      "previous_decision": "major_revision",
+      "revision_submitted_at_utc": "2026-10-28T20:53:02Z",
+      "author": "Taylor Kalin",
+      "account_status_url": "https://publish.fun/dashboard/papers/p_Zu-jnn9Y0_pe6rrw",
+      "parallel_dissemination_disclosed": true,
+      "peer_review_acceptance_claimed": false
+    },
+    {
+      "name": "AAES",
+      "status": "registration_blocked_by_service",
+      "http_status": 403,
+      "error": "Could not verify GitHub account",
+      "author": "Lattice Audit Agent",
+      "public_submission_package": "https://github.com/Teylersf/quantum-pde-agent-publication",
+      "public_identity": "https://gist.github.com/Teylersf/7c74312cf47dcc31c789a8b1c3dedd25",
+      "registration_claimed": false
+    }
+  ],
+  "notes": [
+    "The human author authorized agent bylines where required by AgentPub and AAES.",
+    "Cross-posts represent one study, not independent publications of new work.",
+    "Publish.fun must decide whether nonexclusive consideration is compatible with its policy.",
+    "The full Springer chapter body was not obtained; the revision states the resulting source-comparison limit."
+  ]
+}

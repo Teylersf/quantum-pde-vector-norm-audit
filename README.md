@@ -15,12 +15,22 @@ and reproducible numerical checks.
 
 ## Read
 
-- **[New paper (PDF)](paper/main.pdf)**
+- **[Revised manuscript](submissions/publishfun-revision.md)** — source quotations,
+  version-specific qualifications, an auxiliary estimate, and cosine-only
+  numerical reproduction added in response to review.
+- [Original deposited paper (PDF, v1)](paper/main.pdf)
 - [LaTeX source](paper/main.tex)
 - [Finding-by-finding audit ledger](audit/ledger.md)
 - [Reproduction instructions and derivations](experiments/README.md)
 - [Machine-readable numerical results](results/verification.json)
 - [Source provenance](SOURCE.md)
+- [Response to the first review round](submissions/publishfun-response.md)
+- [Publication and submission status](submissions/publication-status.json)
+
+The original PDF is the first deposited version. The revised Markdown manuscript
+supersedes its presentation of the auxiliary estimate and numerical table.
+Formula-level findings are scoped to arXiv v1; the full subscription chapter
+body has not been verified. The public publisher Notes were compared separately.
 
 ## Main demonstrated findings
 
@@ -37,7 +47,7 @@ normalized-sampling issues, nonuniform remainder concerns, checkerboard
 stationary modes, gate/readout costs, and editorial ambiguities. They are not
 all classified as false theorems.
 
-The paper proves a **conditional autonomous finite-grid theorem** using an
+The paper records a **standard auxiliary autonomous finite-grid estimate** using an
 exact double-integral defect identity. Under an explicit grid-uniform
 commutator bound K on intermediate split states, the unnormalized error is
 at most K T²/(2L). A normalized-state corollary includes a final-norm lower
@@ -52,11 +62,14 @@ Python 3.11 or later and NumPy:
 python -m pip install -r requirements.txt
 python experiments/verify_claims.py
 python experiments/verify_repaired_bound.py
+python experiments/verify_revision.py
 python scripts/make_results_table.py
 ~~~
 
 The first experiment executes five check groups. The second checks the
-replacement theorem on independent contractive and unitary matrix examples.
+auxiliary estimate on independent contractive and unitary matrix examples.
+The revision experiment checks the exact stencil identity, convergence rates,
+cosine example, evolved supremum, and finite-time limiting coefficients.
 Assertions test substantive invariants and error bounds. Numerical results
 are classical corroboration, not substitutes for the proofs.
 
