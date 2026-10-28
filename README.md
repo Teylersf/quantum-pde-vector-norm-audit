@@ -24,7 +24,8 @@ and reproducible numerical checks.
 - [Reproduction instructions and derivations](experiments/README.md)
 - [Machine-readable numerical results](results/verification.json)
 - [Source provenance](SOURCE.md)
-- [Response to the first review round](submissions/publishfun-response.md)
+- [Response to the latest review round](submissions/publishfun-response.md)
+- [Pinned-code execution log](submissions/publishfun-execution.log)
 - [Publication and submission status](submissions/publication-status.json)
 
 The original PDF is the first deposited version. The revised Markdown manuscript

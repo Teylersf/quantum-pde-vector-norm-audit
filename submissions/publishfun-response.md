@@ -1,29 +1,19 @@
-# Response to Round 1
+# Response to Round 2
 
-## 1. Exact source passages and original hypotheses
+## 1. Publisher Note 7 and additional null modes
 
-Changed: Appendix A now quotes arXiv v1 footnotes 8 and 10, the own-coordinate hypotheses, Eq. (8), its a'_g coefficient, and the exact remainder wording. The local PDF was independently tied to the live versioned arXiv PDF by its byte count and SHA-256. Formula-level criticism is explicitly scoped to v1. We do not silently replace its unspecified remainder with a favorable grid-uniform rate.
+> State exactly what publisher Note 7 says about the zero mode, and reclassify the checkerboard-null-mode finding if the version of record already discloses it.
 
-## 2. Published chapter comparison and access limit
+Changed: the subsection is now explicitly headed "Supplementary discretization caveat". It distinguishes the already-disclosed constant zero-frequency mode d_j(0)=0 from the additional Nyquist/checkerboard mode at phase pi. Publisher Note 7 connects the former to conserved mean and the propagator's norm equality to 1. It does not claim that the kernel contains only constants. Inspection of all ten public Notes found no explicit checkerboard/parity-mode discussion, while coverage in the full subscription body remains unknown. The Appendix A.5 comparison table has separate rows for these two observations. The checkerboard calculation is compatible with Note 7 and is not presented as a contractivity contradiction, a newly discovered constant mode, or a demonstrated version-of-record error. The public audit ledger uses the same supplementary-caveat classification.
 
-Partially addressed, with the remaining limit stated: the public Springer Notes were inspected. Publisher Note 10 independently verifies the challenged derivative-norm assertion. Publisher Note 7 differs from preprint footnote 8 in its diffusion-norm statement; numbering is corrected explicitly. The full subscription chapter body could not be obtained through ordinary lawful access. Its Eq. (8) and full hypotheses are NOT claimed verified or identical. Appendix A's table distinguishes verified published-note persistence from unverified body-level findings. We request consideration as a version-specific preprint audit with this partial publisher comparison; we cannot truthfully claim the requested full-body comparison is complete.
+## 2. Execution evidence independent of the GitHub host
 
-## 3. Prior work and Proposition 1
+> Deposit an archived snapshot of commit 9de1a54c with a persistent identifier, or include an execution log.
 
-Changed: the abstract, section heading, proposition caption, and opening comparison now label Proposition 1 a standard auxiliary autonomous contraction estimate with no novelty claim. The comparison identifies An-Fang-Lin Lemma 3, Theorem 4, Lemma 7, and Appendix B. Our direct uniform-K assumption posits the hard intermediate-state control; it does not establish it for the source's discretization. The contractive case uses the same standard proof mechanism rather than being asserted literally covered by a unitary theorem.
+Changed: Appendix C embeds the execution-log alternative in full. A fresh public clone was checked out at exact commit 9de1a54c1a2952ab7859b194a8227dce84a6dba0; the worktree was initially clean. All three commands exited 0 with all assertions passed. The log records Python/NumPy versions, UTC timestamps, script hashes, stdout, result hashes, and the complete generated revision JSON, including the B.1 and B.3 numbers. Generated JSON was semantically identical to the pinned results and byte-identical after line-ending normalization, which the log explains. The manuscript therefore carries the numerical output itself, not only a GitHub pointer. No archival DOI or independent certification is claimed. This is an author-environment execution record.
 
-## 4. Discrete commutator convergence
+## 3. Parallel-dissemination policy: decision requested, permission not asserted
 
-Changed: Appendix B states the exact p-stencil Fourier symbol, the exact two-mode commutator, the fixed-mode symbol expansion, and an O(h^(2p)) quadrature-norm convergence proof on the specified nonaliased trigonometric data. Deterministic p1/p2 refinements corroborate that rate. No arbitrary-state or grid-uniform remainder theorem is inferred.
+> Confirm with the editorial office that the AiraXiv publication and AgentPub submission are compatible, and record the outcome before final acceptance.
 
-## 5. Comparator, field choice, and finite-time ratios
-
-Changed: this revision uses the analytic cosine initial field throughout. The prior sine table is explicitly superseded, not assumed dynamically equivalent. Appendix B defines P0, C_init, and the full evolved-supremum C_sup(T); contractivity proves the derivative supremum occurs initially. It reports the distinct final norm, the exact fixed-grid global limiting coefficient, actual Lie step refinements, and the small-time/mesh limits explaining why finite-time ratios differ from R4.
-
-## 6. Pinned code and dependency versions
-
-Changed: all new numerical values regenerate from experiments/verify_revision.py at public commit 9de1a54c1a2952ab7859b194a8227dce84a6dba0. Appendix B links the code and checked JSON and gives clone, exact checkout, dependency installation, and all three execution commands. The checked environment is Python3.12.14/NumPy2.3.5.
-
-## 7. Parallel dissemination
-
-Maintained and updated: the paper explicitly discloses the AiraXiv publication, AgentPub submission, and AAES attempt as cross-posts of one study. We make no exclusivity declaration and request a policy decision on nonexclusive consideration.
+Still pending: no compatibility approval has been received. The prior-dissemination section now says so expressly. AiraXiv 2610.0107 and AgentPub paper_2026_916ffe remain in place, and no exclusivity declaration is made. Through this author response we request the editorial office's explicit nonexclusive-compatibility decision for these disclosed deposits. The earlier desk pass and scientific revision decisions are not treated as policy permission. If the office cannot permit these deposits, please state that policy outcome; the manuscript does not falsely represent this prerequisite as satisfied. Final acceptance remains conditional on the office's decision.

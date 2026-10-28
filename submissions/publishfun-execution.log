@@ -1,0 +1,534 @@
+REPRODUCIBILITY EXECUTION LOG
+Author-environment execution, not independent human peer review or third-party certification.
+GitHub was used to obtain the source; the execution output and complete revision-results JSON are embedded here so they can be inspected without following the host link.
+Commands are shown relative to the fresh checkout using the alias python for the actual bundled Python interpreter. Stdout absolute checkout paths are normalized to <checkout>. No command output or numerical value is otherwise altered.
+Source: https://github.com/Teylersf/quantum-pde-vector-norm-audit.git
+Exact commit: 9de1a54c1a2952ab7859b194a8227dce84a6dba0
+Fresh clone/check-out commands:
+git clone --no-checkout --quiet https://github.com/Teylersf/quantum-pde-vector-norm-audit.git <checkout>
+git -C <checkout> checkout --detach 9de1a54c1a2952ab7859b194a8227dce84a6dba0
+git -C <checkout> rev-parse HEAD
+Observed HEAD: 9de1a54c1a2952ab7859b194a8227dce84a6dba0
+Pre-execution git status --porcelain: empty
+Execution started UTC: 2026-10-28T20:56:51.507687+00:00
+Python: 3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]
+Platform: win32
+NumPy: 2.3.5
+Sole dependency from requirements.txt: numpy==2.3.5
+
+COMMAND: python -X utf8 experiments/verify_claims.py
+Started UTC: 2026-10-28T20:56:51.515698+00:00
+Script SHA-256: 02aebf0b5e1b05bc764faa4215027154601d73d23bad62890849eba7b1369d3b
+Exit status: 0
+STDOUT:
+All five check groups passed. Results: <checkout>\results\verification.json
+STDERR:
+(empty)
+Result file: results/verification.json
+Checked-in result SHA-256: 53a936d0ae65798c90b264a5e28afdb42c64789fbad49d95c010720f5e4e9eb9
+Generated result SHA-256: b524562cc051b9022a57b0518384b02fc861c60a706f0178fc1e1f0762c80499
+
+GENERATED CHECK SUMMARY (check names and assertion flags):
+{
+  "all_assertions_passed": true,
+  "checks": [
+    "shear_derivative_growth",
+    "continuum_diffusion_commutator",
+    "normalized_semidiscrete_splitting",
+    "checkerboard_and_consistency",
+    "positivity_assumption"
+  ]
+}
+
+COMMAND: python -X utf8 experiments/verify_repaired_bound.py
+Started UTC: 2026-10-28T20:56:51.811101+00:00
+Script SHA-256: 464b1380c4ef54bd6ff57b4f560459a8b0889c554a06625aac0c062f738f7340
+Exit status: 0
+STDOUT:
+Both independent repaired-bound check groups passed.
+STDERR:
+(empty)
+Result file: results/repaired-bound.json
+Checked-in result SHA-256: ebf74de650bdad8104236b77413eae4910bfe00b0170591387ad7bd64a55a4c2
+Generated result SHA-256: 6f0c2d5cb351e2bdbe07aeda6596b2085d49302b56c329fb5f091a40b5585508
+
+GENERATED CHECK SUMMARY (check names and assertion flags):
+{
+  "all_assertions_passed": true,
+  "checks": [
+    {
+      "unitary": false,
+      "K": 0.4880573736764973,
+      "final_norm": 0.21688907107603758,
+      "T": 0.8,
+      "rows": [
+        {
+          "steps": 4,
+          "error": 0.0059373378941003935,
+          "bound": 0.03904458989411979,
+          "normalized_error": 0.026529367107213,
+          "normalized_bound": 0.3600420224072187
+        },
+        {
+          "steps": 8,
+          "error": 0.0030483712163287494,
+          "bound": 0.019522294947059895,
+          "normalized_error": 0.013455286633253967,
+          "normalized_bound": 0.18002101120360936
+        },
+        {
+          "steps": 16,
+          "error": 0.0015457694972964974,
+          "bound": 0.009761147473529947,
+          "normalized_error": 0.006777464467914052,
+          "normalized_bound": 0.09001050560180468
+        },
+        {
+          "steps": 32,
+          "error": 0.0007784866272750414,
+          "bound": 0.004880573736764974,
+          "normalized_error": 0.003401454549396019,
+          "normalized_bound": 0.04500525280090234
+        },
+        {
+          "steps": 64,
+          "error": 0.0003906694394702887,
+          "bound": 0.002440286868382487,
+          "normalized_error": 0.0017039409106379248,
+          "normalized_bound": 0.02250262640045117
+        }
+      ]
+    },
+    {
+      "unitary": true,
+      "K": 0.48805737367649726,
+      "final_norm": 1.0000000000000002,
+      "T": 0.8,
+      "rows": [
+        {
+          "steps": 4,
+          "error": 0.03715619267064224,
+          "bound": 0.03904458989411979,
+          "normalized_error": 0.037156192670642296,
+          "normalized_bound": 0.07808917978823957
+        },
+        {
+          "steps": 8,
+          "error": 0.018585028812594655,
+          "bound": 0.019522294947059895,
+          "normalized_error": 0.018585028812594752,
+          "normalized_bound": 0.03904458989411978
+        },
+        {
+          "steps": 16,
+          "error": 0.009293407085864175,
+          "bound": 0.009761147473529947,
+          "normalized_error": 0.00929340708586425,
+          "normalized_bound": 0.01952229494705989
+        },
+        {
+          "steps": 32,
+          "error": 0.004646821367161116,
+          "bound": 0.004880573736764974,
+          "normalized_error": 0.00464682136716118,
+          "normalized_bound": 0.009761147473529946
+        },
+        {
+          "steps": 64,
+          "error": 0.0023234269384666637,
+          "bound": 0.002440286868382487,
+          "normalized_error": 0.0023234269384667145,
+          "normalized_bound": 0.004880573736764973
+        }
+      ]
+    }
+  ]
+}
+
+COMMAND: python -X utf8 experiments/verify_revision.py
+Started UTC: 2026-10-28T20:56:52.033439+00:00
+Script SHA-256: 24bd3e528e10efaef782c76de0ef8cba679b11088e7d33aa57d48952e1755adf
+Exit status: 0
+STDOUT:
+All revision checks passed. Results: <checkout>\results\revision-verification.json
+STDERR:
+(empty)
+Result file: results/revision-verification.json
+Checked-in result SHA-256: 91f3233515f4be075c5e0e670db4f4ebf82b642ec1bc58aa7608012bd8b28a74
+Generated result SHA-256: 8278a870bdba9495ed3f0b1bbcd125fc3e59ba3d59618bee5dcf68c8e68154a7
+
+COMPLETE GENERATED REVISION RESULTS JSON (unabridged):
+{
+  "source_version": "arXiv:2603.08799v1",
+  "scope": "Revision-only cosine-example checks. Finite-grid results and a fixed-trigonometric-data convergence proof; no unconditional PDE splitting theorem or quantum-advantage claim.",
+  "numpy_version": "2.3.5",
+  "checks": {
+    "cosine_continuum_commutator": {
+      "initial_field": "1+b*cos(2*pi*m*x)*cos(2*pi*y)",
+      "parameters": {
+        "a": 0.2,
+        "b": 0.5,
+        "m": 4
+      },
+      "coefficients": "kappa_x=1; kappa_y=1+a*sin(2*pi*x)",
+      "commutator_convention": "[A,B]=AB-BA; A=d_xx; B=kappa_y*d_yy",
+      "analytic_identity": "[A,B]u0=ab*q^4*((m+1/2)*sin(q*(m+1)*x)+(m-1/2)*sin(q*(m-1)*x))*cos(q*y)",
+      "commutator_L2": 444.25380711285726,
+      "retained_term_L2": 55.10290305548867,
+      "omitted_term_L2": 440.82322444390934,
+      "printed_numerator_P0": 77.92727282720193,
+      "initial_norm_n0": 1.0307764064044151,
+      "initial_normalized_comparator_P0_over_2n0": 37.80027964504453,
+      "small_time_normalized_coefficient": 215.4947495657747,
+      "actual_to_printed_ratio_R4": 5.700877125495689,
+      "inner_product_u0_commutator_u0": 3.552713678800501e-15,
+      "minimum_initial_field": 0.5,
+      "minimum_diffusivity": 0.8,
+      "quadrature_points_per_axis": 256
+    },
+    "fixed_trigonometric_discrete_commutator_refinement": {
+      "exact_symbol": "sigma_p,h(r)=2/h*sum_{k=1}^p a_k*sin(2*pi*r*k*h); lambda_p,h(r)=sigma_p,h(r)^2",
+      "stencil_weights": "a_k=(-1)^(k+1)*binom(2p,p-k)/(k*binom(2p,p)) for 1<=k<=p; a_-k=-a_k",
+      "exact_discrete_commutator": "(ab*lambda(1)/2)*((lambda(m+1)-lambda(m))*sin(q*(m+1)*x)+(lambda(m)-lambda(m-1))*sin(q*(m-1)*x))*cos(q*y)",
+      "fixed_mode_symbol_expansion": "lambda_p,h(r)=(q*r)^2-2*(p!)^2/(2p+1)!*(q*r)^(2p+2)*h^(2p)+O(h^(2p+2))",
+      "analytic_conclusion": "For fixed m and p, only modes m-1 and m+1 occur; their coefficients converge with O(h^(2p)) error. Orthogonality therefore gives O(h^(2p)) quadrature-norm commutator convergence. This is a fixed-trigonometric-data statement, not a uniform theorem for arbitrary evolving inputs.",
+      "rows": [
+        {
+          "p": 1,
+          "points_per_axis": 32,
+          "commutator_L2": 269.9827619181166,
+          "commutator_minus_continuum_L2": 179.5070849887809,
+          "observed_order": null,
+          "actual_to_continuum_printed_numerator_ratio": 3.464547803652564,
+          "exact_symbol_vs_direct_FFT_residual_L2": 1.3195460723775286e-12
+        },
+        {
+          "p": 1,
+          "points_per_axis": 64,
+          "commutator_L2": 394.9717077852883,
+          "commutator_minus_continuum_L2": 50.48747093916346,
+          "observed_order": 1.8300434714737925,
+          "actual_to_continuum_printed_numerator_ratio": 5.068465679032672,
+          "exact_symbol_vs_direct_FFT_residual_L2": 3.4891897822019206e-12
+        },
+        {
+          "p": 1,
+          "points_per_axis": 128,
+          "commutator_L2": 431.54964707112885,
+          "commutator_minus_continuum_L2": 13.000538305893354,
+          "observed_order": 1.9573540491629533,
+          "actual_to_continuum_printed_numerator_ratio": 5.5378512735593715,
+          "exact_symbol_vs_direct_FFT_residual_L2": 1.9358261007066975e-11
+        },
+        {
+          "p": 1,
+          "points_per_axis": 256,
+          "commutator_L2": 441.0533477915858,
+          "commutator_minus_continuum_L2": 3.27426140134946,
+          "observed_order": 1.9893299519578864,
+          "actual_to_continuum_printed_numerator_ratio": 5.659807302246924,
+          "exact_symbol_vs_direct_FFT_residual_L2": 7.815240029213786e-11
+        },
+        {
+          "p": 1,
+          "points_per_axis": 512,
+          "commutator_L2": 443.45215905969167,
+          "commutator_minus_continuum_L2": 0.8200805535145287,
+          "observed_order": 1.9973319718097655,
+          "actual_to_continuum_printed_numerator_ratio": 5.690589994635314,
+          "exact_symbol_vs_direct_FFT_residual_L2": 2.691337091594078e-10
+        },
+        {
+          "p": 1,
+          "points_per_axis": 1024,
+          "commutator_L2": 444.0532991630936,
+          "commutator_minus_continuum_L2": 0.20511495263075427,
+          "observed_order": 1.9993329609839416,
+          "actual_to_continuum_printed_numerator_ratio": 5.698304111677943,
+          "exact_symbol_vs_direct_FFT_residual_L2": 1.9041861704200017e-09
+        },
+        {
+          "p": 2,
+          "points_per_axis": 32,
+          "commutator_L2": 406.8127939539043,
+          "commutator_minus_continuum_L2": 40.27147362201349,
+          "observed_order": null,
+          "actual_to_continuum_printed_numerator_ratio": 5.220416154636672,
+          "exact_symbol_vs_direct_FFT_residual_L2": 2.2836180648812636e-12
+        },
+        {
+          "p": 2,
+          "points_per_axis": 64,
+          "commutator_L2": 441.6400178676685,
+          "commutator_minus_continuum_L2": 2.8080977903533184,
+          "observed_order": 3.8420931820061957,
+          "actual_to_continuum_printed_numerator_ratio": 5.667335732984949,
+          "exact_symbol_vs_direct_FFT_residual_L2": 4.331281256236457e-12
+        },
+        {
+          "p": 2,
+          "points_per_axis": 128,
+          "commutator_L2": 444.0864880656725,
+          "commutator_minus_continuum_L2": 0.1798704192693011,
+          "observed_order": 3.9645633258570556,
+          "actual_to_continuum_printed_numerator_ratio": 5.698730007534102,
+          "exact_symbol_vs_direct_FFT_residual_L2": 2.9913136470192057e-11
+        },
+        {
+          "p": 2,
+          "points_per_axis": 256,
+          "commutator_L2": 444.2432896339916,
+          "commutator_minus_continuum_L2": 0.011308956308613428,
+          "observed_order": 3.991420250739752,
+          "actual_to_continuum_printed_numerator_ratio": 5.7007421601814405,
+          "exact_symbol_vs_direct_FFT_residual_L2": 1.2499434051226693e-10
+        },
+        {
+          "p": 2,
+          "points_per_axis": 512,
+          "commutator_L2": 444.25314883996384,
+          "commutator_minus_continuum_L2": 0.0007078526043938106,
+          "observed_order": 3.9978730001792155,
+          "actual_to_continuum_printed_numerator_ratio": 5.700868678223386,
+          "exact_symbol_vs_direct_FFT_residual_L2": 5.153125003538766e-10
+        },
+        {
+          "p": 2,
+          "points_per_axis": 1024,
+          "commutator_L2": 444.2537659562937,
+          "commutator_minus_continuum_L2": 4.425706226420644e-05,
+          "observed_order": 3.9994693853989993,
+          "actual_to_continuum_printed_numerator_ratio": 5.700876597355,
+          "exact_symbol_vs_direct_FFT_residual_L2": 3.037058017342008e-09
+        }
+      ]
+    },
+    "normalized_cosine_semidiscrete_splitting": {
+      "grid": [
+        128,
+        128
+      ],
+      "p": 1,
+      "initial_field": "1+b*cos(2*pi*m*x)*cos(2*pi*y)",
+      "method": "Exact invariant single-y-cosine-mode reduction; symmetric eigendecomposition for U_h(t); FFT/pointwise Lie factors; analytic divided differences for the global leading coefficient.",
+      "split_order": "S_dt=exp(dt*B_h)exp(dt*A_h)",
+      "normalized_coefficient_formula": "c_h(T)=||DN_(U_h(T)u0)((T/2)*int_0^T U_h(T-s)[B_h,A_h]U_h(s)u0 ds)||_h/T^2",
+      "initial_time_comparator_formula": "C_init=P0/(2*n0), P0=||kappa_x||inf*||partial_xx kappa_y||inf*||partial_yy u0||=ab*q^4/2",
+      "full_evolved_supremum_comparator_formula": "C_sup(T)=(1/(2*nT))*sup_(0<=s<=T)(a*q^2*||partial_yy u_h(s)||_h)=ab*q^4/(4*nT), using the continuum y derivative on the invariant single-mode interpolant",
+      "contractivity_proof": "g'=H_h g, H_h=A_h-lambda_y*diag(kappa_y)<=-lambda_y*(1-a)I. Hence d||g||_h^2/dt=2<g,H_h g>_h<=0; both ||partial_yy u_h||_h=q^2||g||_h/sqrt(2) and its normalized version attain their supremum at s=0. In the continuum replace A_h by d_xx and lambda_y by q^2 and integrate by parts.",
+      "fixed_grid_small_time_limit": 209.33232677321027,
+      "fixed_grid_small_time_ratio_to_initial_comparator": 5.5378512735593715,
+      "why_finite_time_ratio_is_not_R4": "R4 is a continuum, initial-commutator ratio. At fixed h the limiting ratio as T->0 is R_h; at positive T the integral propagates the evolving commutator and final normalization projects the defect at U_h(T)u0. Only after the T->0 and h->0 limits does the ratio approach R4. Neither finite T rows nor 1/L refinement alone should equal R4.",
+      "coefficient_rows": [
+        {
+          "T": 1e-08,
+          "exact_final_norm_nT": 1.0307760043886884,
+          "initial_time_comparator_P0_over_2n0": 37.80027964504453,
+          "full_evolved_supremum_comparator_P0_over_2nT": 37.80029438763344,
+          "semidiscrete_uyy_supremum_comparator": 37.76994330424299,
+          "mean_lower_bound_upper_comparator_P0_over_2": 38.963636413600966,
+          "supremum_uyy_continuum_derivative_norm": 9.869604401089358,
+          "supremum_uyy_semidiscrete_derivative_norm": 9.861679775340777,
+          "lim_L_to_infinity_error_times_L_over_T_squared": 209.3309071185178,
+          "ratio_to_initial_time_comparator": 5.537813716834771,
+          "ratio_to_full_evolved_supremum_comparator": 5.537811557017966,
+          "ratio_to_mean_lower_bound_upper_comparator": 5.372468444589198,
+          "ratio_to_discrete_small_time_limit": 0.9999932181774581
+        },
+        {
+          "T": 1e-06,
+          "exact_final_norm_nT": 1.03073623043501,
+          "initial_time_comparator_P0_over_2n0": 37.80027964504453,
+          "full_evolved_supremum_comparator_P0_over_2nT": 37.80175302187333,
+          "semidiscrete_uyy_supremum_comparator": 37.771400767298104,
+          "mean_lower_bound_upper_comparator_P0_over_2": 38.963636413600966,
+          "supremum_uyy_continuum_derivative_norm": 9.869604401089358,
+          "supremum_uyy_semidiscrete_derivative_norm": 9.861679775340777,
+          "lim_L_to_infinity_error_times_L_over_T_squared": 209.19040940845557,
+          "ratio_to_initial_time_comparator": 5.534096873695472,
+          "ratio_to_full_evolved_supremum_comparator": 5.533881174436835,
+          "ratio_to_mean_lower_bound_upper_comparator": 5.368862577093391,
+          "ratio_to_discrete_small_time_limit": 0.9993220475454397
+        },
+        {
+          "T": 1e-05,
+          "exact_final_norm_nT": 1.0303769646230374,
+          "initial_time_comparator_P0_over_2n0": 37.80027964504453,
+          "full_evolved_supremum_comparator_P0_over_2nT": 37.814933515964015,
+          "semidiscrete_uyy_supremum_comparator": 37.784570678342234,
+          "mean_lower_bound_upper_comparator_P0_over_2": 38.963636413600966,
+          "supremum_uyy_continuum_derivative_norm": 9.869604401089358,
+          "supremum_uyy_semidiscrete_derivative_norm": 9.861679775340777,
+          "lim_L_to_infinity_error_times_L_over_T_squared": 207.91751813172536,
+          "ratio_to_initial_time_comparator": 5.5004227504169405,
+          "ratio_to_full_evolved_supremum_comparator": 5.4982912516281575,
+          "ratio_to_mean_lower_bound_upper_comparator": 5.336193878945754,
+          "ratio_to_discrete_small_time_limit": 0.9932413274944499
+        },
+        {
+          "T": 0.0002,
+          "exact_final_norm_nT": 1.023689606760302,
+          "initial_time_comparator_P0_over_2n0": 37.80027964504453,
+          "full_evolved_supremum_comparator_P0_over_2nT": 38.06196346655334,
+          "semidiscrete_uyy_supremum_comparator": 38.031402280565445,
+          "mean_lower_bound_upper_comparator_P0_over_2": 38.963636413600966,
+          "supremum_uyy_continuum_derivative_norm": 9.869604401089358,
+          "supremum_uyy_semidiscrete_derivative_norm": 9.861679775340777,
+          "lim_L_to_infinity_error_times_L_over_T_squared": 182.8108724873639,
+          "ratio_to_initial_time_comparator": 4.836230689402576,
+          "ratio_to_full_evolved_supremum_comparator": 4.802980609447738,
+          "ratio_to_mean_lower_bound_upper_comparator": 4.691832932296597,
+          "ratio_to_discrete_small_time_limit": 0.8733045454819809
+        },
+        {
+          "T": 0.0005,
+          "exact_final_norm_nT": 1.0159754518981856,
+          "initial_time_comparator_P0_over_2n0": 37.80027964504453,
+          "full_evolved_supremum_comparator_P0_over_2nT": 38.350962457610294,
+          "semidiscrete_uyy_supremum_comparator": 38.32016922495136,
+          "mean_lower_bound_upper_comparator_P0_over_2": 38.963636413600966,
+          "supremum_uyy_continuum_derivative_norm": 9.869604401089358,
+          "supremum_uyy_semidiscrete_derivative_norm": 9.861679775340777,
+          "lim_L_to_infinity_error_times_L_over_T_squared": 149.3819418965322,
+          "ratio_to_initial_time_comparator": 3.9518739887448313,
+          "ratio_to_full_evolved_supremum_comparator": 3.8951288917884543,
+          "ratio_to_mean_lower_bound_upper_comparator": 3.833880911700216,
+          "ratio_to_discrete_small_time_limit": 0.7136114340255337
+        },
+        {
+          "T": 0.001,
+          "exact_final_norm_nT": 1.0082639887633198,
+          "initial_time_comparator_P0_over_2n0": 37.80027964504453,
+          "full_evolved_supremum_comparator_P0_over_2nT": 38.64428051366942,
+          "semidiscrete_uyy_supremum_comparator": 38.61325176642194,
+          "mean_lower_bound_upper_comparator_P0_over_2": 38.963636413600966,
+          "supremum_uyy_continuum_derivative_norm": 9.869604401089358,
+          "supremum_uyy_semidiscrete_derivative_norm": 9.861679775340777,
+          "lim_L_to_infinity_error_times_L_over_T_squared": 107.32003137686496,
+          "ratio_to_initial_time_comparator": 2.839133265272925,
+          "ratio_to_full_evolved_supremum_comparator": 2.777125876076364,
+          "ratio_to_mean_lower_bound_upper_comparator": 2.754363844217655,
+          "ratio_to_discrete_small_time_limit": 0.5126777742891809
+        },
+        {
+          "T": 0.002,
+          "exact_final_norm_nT": 1.002201379936735,
+          "initial_time_comparator_P0_over_2n0": 37.80027964504453,
+          "full_evolved_supremum_comparator_P0_over_2nT": 38.87805105203565,
+          "semidiscrete_uyy_supremum_comparator": 38.84683460283455,
+          "mean_lower_bound_upper_comparator_P0_over_2": 38.963636413600966,
+          "supremum_uyy_continuum_derivative_norm": 9.869604401089358,
+          "supremum_uyy_semidiscrete_derivative_norm": 9.861679775340777,
+          "lim_L_to_infinity_error_times_L_over_T_squared": 57.09412501781803,
+          "ratio_to_initial_time_comparator": 1.510415413693979,
+          "ratio_to_full_evolved_supremum_comparator": 1.4685439077540536,
+          "ratio_to_mean_lower_bound_upper_comparator": 1.4653181856991224,
+          "ratio_to_discrete_small_time_limit": 0.27274394689967574
+        }
+      ],
+      "step_refinement_rows": [
+        {
+          "T": 0.0002,
+          "steps": 64,
+          "normalized_L2_error": 1.1426216768807494e-07,
+          "measured_error_times_L_over_T_squared": 182.8194683009199,
+          "exact_global_limit_coefficient": 182.8108724873639,
+          "full_evolved_supremum_comparator": 38.06196346655334,
+          "measured_to_full_supremum_ratio": 4.803206446813264
+        },
+        {
+          "T": 0.0002,
+          "steps": 128,
+          "normalized_L2_error": 5.712974044598263e-08,
+          "measured_error_times_L_over_T_squared": 182.8151694271444,
+          "exact_global_limit_coefficient": 182.8108724873639,
+          "full_evolved_supremum_comparator": 38.06196346655334,
+          "measured_to_full_supremum_ratio": 4.803093502724626
+        },
+        {
+          "T": 0.0002,
+          "steps": 256,
+          "normalized_L2_error": 2.8564534285849246e-08,
+          "measured_error_times_L_over_T_squared": 182.81301942943517,
+          "exact_global_limit_coefficient": 182.8108724873639,
+          "full_evolved_supremum_comparator": 38.06196346655334,
+          "measured_to_full_supremum_ratio": 4.803037015945873
+        },
+        {
+          "T": 0.0002,
+          "steps": 512,
+          "normalized_L2_error": 1.4282183111689202e-08,
+          "measured_error_times_L_over_T_squared": 182.81194382962178,
+          "exact_global_limit_coefficient": 182.8108724873639,
+          "full_evolved_supremum_comparator": 38.06196346655334,
+          "measured_to_full_supremum_ratio": 4.803008756767538
+        },
+        {
+          "T": 0.0005,
+          "steps": 64,
+          "normalized_L2_error": 5.835707804828926e-07,
+          "measured_error_times_L_over_T_squared": 149.39411980362053,
+          "exact_global_limit_coefficient": 149.3819418965322,
+          "full_evolved_supremum_comparator": 38.350962457610294,
+          "measured_to_full_supremum_ratio": 3.8954464302883496
+        },
+        {
+          "T": 0.0005,
+          "steps": 128,
+          "normalized_L2_error": 2.9177349193345385e-07,
+          "measured_error_times_L_over_T_squared": 149.38802786992838,
+          "exact_global_limit_coefficient": 149.3819418965322,
+          "full_evolved_supremum_comparator": 38.350962457610294,
+          "measured_to_full_supremum_ratio": 3.895287583331148
+        },
+        {
+          "T": 0.0005,
+          "steps": 256,
+          "normalized_L2_error": 1.4588377330795654e-07,
+          "measured_error_times_L_over_T_squared": 149.3849838673475,
+          "exact_global_limit_coefficient": 149.3819418965322,
+          "full_evolved_supremum_comparator": 38.350962457610294,
+          "measured_to_full_supremum_ratio": 3.895208211070693
+        },
+        {
+          "T": 0.0005,
+          "steps": 512,
+          "normalized_L2_error": 7.294114358034549e-08,
+          "measured_error_times_L_over_T_squared": 149.38346205254757,
+          "exact_global_limit_coefficient": 149.3819418965322,
+          "full_evolved_supremum_comparator": 38.350962457610294,
+          "measured_to_full_supremum_ratio": 3.895168529803199
+        }
+      ]
+    }
+  },
+  "all_assertions_passed": true
+}
+
+Execution completed UTC: 2026-10-28T20:56:52.321308+00:00
+All three commands exited 0. Internal substantive assertions in each script completed.
+No external dataset, quantum computer, or original-paper PDF was used.
+This log is a captured execution record, not a guarantee of exact real arithmetic or independent external validation.
+
+PINNED-RESULT REPRODUCTION CHECK
+The differing raw generated hashes above are solely Windows CRLF versus repository LF line endings. The following checks compare actual outputs against git show of each pinned result. Numeric/string/array/object values match exactly.
+[
+  {
+    "result": "results/verification.json",
+    "JSON_semantically_identical_to_pinned_result": true,
+    "bytes_identical_after_CRLF_to_LF_normalization": true,
+    "LF_normalized_SHA256": "53a936d0ae65798c90b264a5e28afdb42c64789fbad49d95c010720f5e4e9eb9"
+  },
+  {
+    "result": "results/repaired-bound.json",
+    "JSON_semantically_identical_to_pinned_result": true,
+    "bytes_identical_after_CRLF_to_LF_normalization": true,
+    "LF_normalized_SHA256": "ebf74de650bdad8104236b77413eae4910bfe00b0170591387ad7bd64a55a4c2"
+  },
+  {
+    "result": "results/revision-verification.json",
+    "JSON_semantically_identical_to_pinned_result": true,
+    "bytes_identical_after_CRLF_to_LF_normalization": true,
+    "LF_normalized_SHA256": "91f3233515f4be075c5e0e670db4f4ebf82b642ec1bc58aa7608012bd8b28a74"
+  }
+]
