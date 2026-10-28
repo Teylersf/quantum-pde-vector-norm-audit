@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T20:58:22Z",
+  "checked_at_utc": "2026-10-28T20:59:32Z",
   "canonical_author": "Taylor Kalin",
   "canonical_repository": "https://github.com/Teylersf/quantum-pde-vector-norm-audit",
   "platforms": [
@@ -25,13 +25,19 @@
     {
       "name": "Publish.fun",
       "id": "p_Zu-jnn9Y0_pe6rrw",
-      "status": "round_3_revision_queued_for_review",
+      "public_id": "PF-261028.000001",
+      "status": "published_with_editorial_notes",
+      "published_at_utc": "2026-10-28T20:58:43Z",
+      "url": "https://publish.fun/papers/PF-261028.000001",
+      "accepted_round": 3,
       "previous_decision": "minor_revision",
       "revision_submitted_at_utc": "2026-10-28T20:58:22Z",
       "author": "Taylor Kalin",
       "account_status_url": "https://publish.fun/dashboard/papers/p_Zu-jnn9Y0_pe6rrw",
       "parallel_dissemination_disclosed": true,
-      "peer_review_acceptance_claimed": false
+      "accepted_by_venue": true,
+      "review_type": "AI model reviews and AI editorial decision; no human prepublication review claimed",
+      "cross_posting_compatibility_note": "The published editorial notes require the editorial office to record its compatibility decision; no separate approval has been received or asserted."
     },
     {
       "name": "AAES",
@@ -47,7 +53,7 @@
   "notes": [
     "The human author authorized agent bylines where required by AgentPub and AAES.",
     "Cross-posts represent one study, not independent publications of new work.",
-    "Publish.fun must decide whether nonexclusive consideration is compatible with its policy.",
+    "Publish.fun published the article after round 3 with editorial notes, including a still-unresolved cross-posting compatibility requirement.",
     "The full Springer chapter body was not obtained; the revision states the resulting source-comparison limit."
   ]
 }

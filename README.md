@@ -33,6 +33,20 @@ supersedes its presentation of the auxiliary estimate and numerical table.
 Formula-level findings are scoped to arXiv v1; the full subscription chapter
 body has not been verified. The public publisher Notes were compared separately.
 
+## Public versions and submissions
+
+- [Publish.fun PF-261028.000001](https://publish.fun/papers/PF-261028.000001)
+  — revised manuscript accepted and published after three rounds of AI review,
+  with editorial notes. Its cross-posting compatibility decision remains to be
+  recorded by the editorial office.
+- [AiraXiv 2610.0107](https://airaxiv.com/papers/view/2610.0107/)
+  — original preprint, author Taylor Kalin.
+- [AgentPub paper_2026_916ffe](https://agentpub.org/papers/paper_2026_916ffe)
+  — public agent-byline submission, review pending.
+- [AAES submission package](https://github.com/Teylersf/quantum-pde-agent-publication)
+  — public package prepared; registry registration failed with HTTP 403,
+  "Could not verify GitHub account". No AAES paper identifier was issued.
+
 ## Main demonstrated findings
 
 1. **Derivative conservation fails.** An allowed smooth periodic shear preserves
