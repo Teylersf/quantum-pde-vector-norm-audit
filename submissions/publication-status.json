@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T20:53:24Z",
+  "checked_at_utc": "2026-10-28T20:55:17Z",
   "canonical_author": "Taylor Kalin",
   "canonical_repository": "https://github.com/Teylersf/quantum-pde-vector-norm-audit",
   "platforms": [
@@ -25,7 +25,7 @@
     {
       "name": "Publish.fun",
       "id": "p_Zu-jnn9Y0_pe6rrw",
-      "status": "round_2_revision_queued_for_review",
+      "status": "round_2_revision_under_review",
       "previous_decision": "major_revision",
       "revision_submitted_at_utc": "2026-10-28T20:53:02Z",
       "author": "Taylor Kalin",
