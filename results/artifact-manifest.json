@@ -1,6 +1,12 @@
 {
   "publication_date": "2026-10-28",
-  "status": "AI-assisted technical note; not peer reviewed; non-exhaustive audit",
+  "author": "Taylor Kalin",
+  "contact": {
+    "website": "https://taylorkalin.com",
+    "email": "teylersf@gmail.com",
+    "phone": "+1 509-919-0487"
+  },
+  "status": "Independent technical note; not peer reviewed; non-exhaustive audit",
   "source_version": "arXiv:2603.08799v1",
   "source_sha256": "d03a710413b32ac622700adcfbaa9c3b8604ab9db00e45c348ea06c3d4be8988",
   "source_pdf_pages": 9,
@@ -17,12 +23,12 @@
   },
   "artifacts": {
     "paper/main.tex": {
-      "sha256": "4c8fc719a107ec70afd713a31b184a50c687eec9c3b3a7fd297d915c16d465f2",
-      "bytes": 25319
+      "sha256": "d6d67774458fde4877719d42e286b97fd46bdeaac4fa413de8248c41ebf35dd3",
+      "bytes": 25499
     },
     "paper/main.pdf": {
-      "sha256": "bc3da438ef92d189db8c60ec20cb42a5d831884b621de430a20c4ce0de6bbc32",
-      "bytes": 99378
+      "sha256": "1f545b7fe927e7fd86e15d3b695fd178ef114b2892c2fb83cbc84492f3ba7a92",
+      "bytes": 99836
     },
     "paper/results-table.tex": {
       "sha256": "cf116fd50c2a748ffc8109071af16351ac26d5bf71cda5b88bea836cd297d673",

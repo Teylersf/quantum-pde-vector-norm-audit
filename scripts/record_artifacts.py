@@ -22,7 +22,10 @@ if __name__ == "__main__":
              "results/repaired-bound.json"]
     data = {
         "publication_date": "2026-10-28",
-        "status": "AI-assisted technical note; not peer reviewed; non-exhaustive audit",
+        "author": "Taylor Kalin",
+        "contact": {"website": "https://taylorkalin.com",
+                    "email": "teylersf@gmail.com", "phone": "+1 509-919-0487"},
+        "status": "Independent technical note; not peer reviewed; non-exhaustive audit",
         "source_version": "arXiv:2603.08799v1",
         "source_sha256": "d03a710413b32ac622700adcfbaa9c3b8604ab9db00e45c348ea06c3d4be8988",
         "source_pdf_pages": 9,

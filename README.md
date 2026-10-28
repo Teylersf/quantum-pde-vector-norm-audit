@@ -2,12 +2,16 @@
 
 **Counterexamples and a conditional corrected bound**
 
-An independent, AI-assisted technical note auditing **arXiv:2603.08799v1** by
-Julien Zylberman, Thibault Fredon, Nuno F. Loureiro, and Fabrice Debbasch.
-Prepared with OpenAI Codex at the repository owner's request. **Not peer
-reviewed; not an official erratum, a complete error census, or a quantum
-speedup demonstration.** The original authors are not authors of this note
-and have not endorsed it.
+**Author: Taylor Kalin**
+
+[taylorkalin.com](https://taylorkalin.com) |
+[teylersf@gmail.com](mailto:teylersf@gmail.com) |
+[509-919-0487](tel:+15099190487)
+
+An independent technical note auditing **arXiv:2603.08799v1** by Julien
+Zylberman, Thibault Fredon, Nuno F. Loureiro, and Fabrice Debbasch.
+The paper presents counterexamples, a conditional corrected error bound,
+and reproducible numerical checks.
 
 ## Read
 
@@ -68,13 +72,14 @@ table from JSON. Floating-point last digits can vary with NumPy/BLAS.
 
 ## Scope and publication
 
-Publication date: **28 October 2026**. Published on GitHub by **Teylersf**.
+Publication date: **28 October 2026**. Author: **Taylor Kalin**.
 The audited arXiv v1 PDF has nine pages. Its full source text is not
 redistributed here. Its public record links a conference version of record;
 only that version's public metadata was checked, not its full chapter text.
 See [SOURCE.md](SOURCE.md) for exact source identification.
 
-No claim is made to have found every error, to priority for standard
+This note is not peer reviewed or an official erratum. The original paper's
+authors have not endorsed it. No claim is made to have found every error, to priority for standard
 splitting identities, or to having disproved all mesh-independent
 vector-norm estimates. This repository makes no assertion about misconduct.
 Future corrections should identify the source version, exact equation,

@@ -32,11 +32,16 @@ we claim no priority for the standard defect/telescoping method.
 
 ## Authorship and limitations
 
-The note, checks, and audit text were prepared with OpenAI Codex at the
-GitHub account owner's request, using separate mathematical checks and
-reproducible classical calculations. Those checks are not external academic
-peer review. No institutional affiliation, original-author participation,
-official erratum status, or exhaustive verification is claimed.
+**Author: Taylor Kalin**
+
+- Website: [taylorkalin.com](https://taylorkalin.com)
+- Email: [teylersf@gmail.com](mailto:teylersf@gmail.com)
+- Phone: [509-919-0487](tel:+15099190487)
+
+The note includes mathematical checks and reproducible classical calculations.
+Those checks are not external academic peer review. No institutional
+affiliation, original-author participation, official erratum status, or
+exhaustive verification is claimed.
 
 The repository contains new technical commentary and code. Copyright and
 license terms of referenced papers remain with their respective holders;
