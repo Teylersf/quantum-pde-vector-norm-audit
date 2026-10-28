@@ -1,0 +1,52 @@
+{
+  "publication_date": "2026-10-28",
+  "status": "AI-assisted technical note; not peer reviewed; non-exhaustive audit",
+  "source_version": "arXiv:2603.08799v1",
+  "source_sha256": "d03a710413b32ac622700adcfbaa9c3b8604ab9db00e45c348ea06c3d4be8988",
+  "source_pdf_pages": 9,
+  "new_paper_pdf_pages": 9,
+  "build": {
+    "compiler": "Tectonic 0.17.0",
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "checks": {
+    "source_claim_groups": 5,
+    "replacement_bound_examples": 2,
+    "all_assertions_passed": true
+  },
+  "artifacts": {
+    "paper/main.tex": {
+      "sha256": "4c8fc719a107ec70afd713a31b184a50c687eec9c3b3a7fd297d915c16d465f2",
+      "bytes": 25319
+    },
+    "paper/main.pdf": {
+      "sha256": "bc3da438ef92d189db8c60ec20cb42a5d831884b621de430a20c4ce0de6bbc32",
+      "bytes": 99378
+    },
+    "paper/results-table.tex": {
+      "sha256": "cf116fd50c2a748ffc8109071af16351ac26d5bf71cda5b88bea836cd297d673",
+      "bytes": 1095
+    },
+    "audit/ledger.md": {
+      "sha256": "d914a9b7f31eb8750c037c222a2f8093ed22e3f1ac3ed9747a274900e2d80c13",
+      "bytes": 7615
+    },
+    "experiments/verify_claims.py": {
+      "sha256": "02aebf0b5e1b05bc764faa4215027154601d73d23bad62890849eba7b1369d3b",
+      "bytes": 10880
+    },
+    "experiments/verify_repaired_bound.py": {
+      "sha256": "464b1380c4ef54bd6ff57b4f560459a8b0889c554a06625aac0c062f738f7340",
+      "bytes": 2678
+    },
+    "results/verification.json": {
+      "sha256": "b524562cc051b9022a57b0518384b02fc861c60a706f0178fc1e1f0762c80499",
+      "bytes": 8159
+    },
+    "results/repaired-bound.json": {
+      "sha256": "6f0c2d5cb351e2bdbe07aeda6596b2085d49302b56c329fb5f091a40b5585508",
+      "bytes": 2790
+    }
+  }
+}

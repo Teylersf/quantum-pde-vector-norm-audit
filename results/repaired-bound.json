@@ -1,0 +1,92 @@
+{
+  "scope": "Finite-matrix corroboration of proved conditional theorem",
+  "checks": [
+    {
+      "unitary": false,
+      "K": 0.4880573736764973,
+      "final_norm": 0.21688907107603758,
+      "T": 0.8,
+      "rows": [
+        {
+          "steps": 4,
+          "error": 0.0059373378941003935,
+          "bound": 0.03904458989411979,
+          "normalized_error": 0.026529367107213,
+          "normalized_bound": 0.3600420224072187
+        },
+        {
+          "steps": 8,
+          "error": 0.0030483712163287494,
+          "bound": 0.019522294947059895,
+          "normalized_error": 0.013455286633253967,
+          "normalized_bound": 0.18002101120360936
+        },
+        {
+          "steps": 16,
+          "error": 0.0015457694972964974,
+          "bound": 0.009761147473529947,
+          "normalized_error": 0.006777464467914052,
+          "normalized_bound": 0.09001050560180468
+        },
+        {
+          "steps": 32,
+          "error": 0.0007784866272750414,
+          "bound": 0.004880573736764974,
+          "normalized_error": 0.003401454549396019,
+          "normalized_bound": 0.04500525280090234
+        },
+        {
+          "steps": 64,
+          "error": 0.0003906694394702887,
+          "bound": 0.002440286868382487,
+          "normalized_error": 0.0017039409106379248,
+          "normalized_bound": 0.02250262640045117
+        }
+      ]
+    },
+    {
+      "unitary": true,
+      "K": 0.48805737367649726,
+      "final_norm": 1.0000000000000002,
+      "T": 0.8,
+      "rows": [
+        {
+          "steps": 4,
+          "error": 0.03715619267064224,
+          "bound": 0.03904458989411979,
+          "normalized_error": 0.037156192670642296,
+          "normalized_bound": 0.07808917978823957
+        },
+        {
+          "steps": 8,
+          "error": 0.018585028812594655,
+          "bound": 0.019522294947059895,
+          "normalized_error": 0.018585028812594752,
+          "normalized_bound": 0.03904458989411978
+        },
+        {
+          "steps": 16,
+          "error": 0.009293407085864175,
+          "bound": 0.009761147473529947,
+          "normalized_error": 0.00929340708586425,
+          "normalized_bound": 0.01952229494705989
+        },
+        {
+          "steps": 32,
+          "error": 0.004646821367161116,
+          "bound": 0.004880573736764974,
+          "normalized_error": 0.00464682136716118,
+          "normalized_bound": 0.009761147473529946
+        },
+        {
+          "steps": 64,
+          "error": 0.0023234269384666637,
+          "bound": 0.002440286868382487,
+          "normalized_error": 0.0023234269384667145,
+          "normalized_bound": 0.004880573736764973
+        }
+      ]
+    }
+  ],
+  "all_assertions_passed": true
+}

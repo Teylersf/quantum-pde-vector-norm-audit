@@ -1,0 +1,213 @@
+{
+  "source_version": "arXiv:2603.08799v1",
+  "scope": "Selected analytic counterexamples and deterministic numerical checks, not an exhaustive audit.",
+  "numpy_version": "2.3.5",
+  "checks": {
+    "shear_derivative_growth": {
+      "locator": "page 6, footnote 10 and equality following Eq. (7)",
+      "velocity": "c=(sin(2*pi*y),0)",
+      "initial_field": "sin(2*pi*x)",
+      "exact_solution": "sin(2*pi*(x-t*sin(2*pi*y)))",
+      "conclusion": "Field L2 norm is conserved; derivative L2 norm is not.",
+      "rows": [
+        {
+          "t": 0.0,
+          "field_L2": 0.7071067811865476,
+          "dy_field_L2": 0.0,
+          "analytic_dy_field_L2": 0.0
+        },
+        {
+          "t": 0.1,
+          "field_L2": 0.7071067811865476,
+          "dy_field_L2": 1.9739208802178716,
+          "analytic_dy_field_L2": 1.9739208802178716
+        },
+        {
+          "t": 1.0,
+          "field_L2": 0.7071067811865476,
+          "dy_field_L2": 19.739208802178716,
+          "analytic_dy_field_L2": 19.739208802178716
+        }
+      ]
+    },
+    "continuum_diffusion_commutator": {
+      "locator": "page 6, displayed a'_g following Eq. (8)",
+      "parameters": {
+        "m": 4,
+        "a": 0.2,
+        "b": 0.5,
+        "quadrature_points_per_axis": 256
+      },
+      "initial_field": "1+b*sin(2*pi*m*x)*sin(2*pi*y)",
+      "coefficients": "kx=1, ky=1+a*sin(2*pi*x)",
+      "identity": "[A,B]u=ky_xx*u_yy+2*ky_x*u_xyy",
+      "actual_commutator_L2": 444.2538071128573,
+      "retained_term_L2": 55.102903055488675,
+      "omitted_term_L2": 440.82322444390934,
+      "printed_commutator_bound_without_common_factors": 77.92727282720196,
+      "actual_to_printed_ratio": 5.700877125495688,
+      "analytic_ratio": 5.70087712549569,
+      "inner_product_u_commutator_u": -6.661338147750939e-15,
+      "conclusion": "The missing mixed derivative term is nonzero. The exact commutator exceeds the printed terms, even with positive coefficients and a positive field. It is orthogonal to u, so leading normalization does not remove it."
+    },
+    "normalized_semidiscrete_splitting": {
+      "locator": "page 6, Eq. (8) leading coefficient a'_g",
+      "grid": [
+        128,
+        128
+      ],
+      "stencil_order": 2,
+      "m": 4,
+      "a": 0.2,
+      "b": 0.5,
+      "method": "Symmetric eigendecomposition for exact semidiscrete evolution; FFT and pointwise exponentials for Lie splitting. Constant plus one y sine mode is an invariant subspace.",
+      "interpretation": "The observed 1/L leading coefficient exceeds printed a'_g. This contradicts that coefficient if its remainder is o(1/L); it does not rule out a corrected grid-independent bound.",
+      "rows": [
+        {
+          "T": 0.0002,
+          "steps": 64,
+          "normalized_L2_error": 1.1426216763647112e-07,
+          "measured_error_times_L_over_T_squared": 182.8194682183538,
+          "printed_a_g": 38.061963466553344,
+          "measured_to_printed_ratio": 4.803206444644007
+        },
+        {
+          "T": 0.0002,
+          "steps": 128,
+          "normalized_L2_error": 5.7129740612672244e-08,
+          "measured_error_times_L_over_T_squared": 182.81516996055117,
+          "printed_a_g": 38.061963466553344,
+          "measured_to_printed_ratio": 4.803093516738794
+        },
+        {
+          "T": 0.0002,
+          "steps": 256,
+          "normalized_L2_error": 2.8564534678275716e-08,
+          "measured_error_times_L_over_T_squared": 182.81302194096457,
+          "printed_a_g": 38.061963466553344,
+          "measured_to_printed_ratio": 4.803037081931154
+        },
+        {
+          "T": 0.0002,
+          "steps": 512,
+          "normalized_L2_error": 1.4282183498442406e-08,
+          "measured_error_times_L_over_T_squared": 182.8119487800628,
+          "printed_a_g": 38.061963466553344,
+          "measured_to_printed_ratio": 4.803008886830218
+        },
+        {
+          "T": 0.0005,
+          "steps": 64,
+          "normalized_L2_error": 5.835707804608168e-07,
+          "measured_error_times_L_over_T_squared": 149.39411979796913,
+          "printed_a_g": 38.3509624576103,
+          "measured_to_printed_ratio": 3.895446430140989
+        },
+        {
+          "T": 0.0005,
+          "steps": 128,
+          "normalized_L2_error": 2.917734918683038e-07,
+          "measured_error_times_L_over_T_squared": 149.38802783657155,
+          "printed_a_g": 38.3509624576103,
+          "measured_to_printed_ratio": 3.895287582461369
+        },
+        {
+          "T": 0.0005,
+          "steps": 256,
+          "normalized_L2_error": 1.458837737343041e-07,
+          "measured_error_times_L_over_T_squared": 149.3849843039274,
+          "printed_a_g": 38.3509624576103,
+          "measured_to_printed_ratio": 3.895208222454498
+        },
+        {
+          "T": 0.0005,
+          "steps": 512,
+          "normalized_L2_error": 7.294114422127235e-08,
+          "measured_error_times_L_over_T_squared": 149.38346336516577,
+          "printed_a_g": 38.3509624576103,
+          "measured_to_printed_ratio": 3.895168564029672
+        }
+      ]
+    },
+    "checkerboard_and_consistency": {
+      "locator": "pages 3-4, Eq. (4) using the square of a centered first derivative",
+      "checkerboard_grid_points": 64,
+      "centered_derivative_checkerboard_norm": 0.0,
+      "squared_centered_derivative_checkerboard_norm": 0.0,
+      "standard_laplacian_checkerboard_norm": 16384.0,
+      "conclusion": "An even periodic grid has an additional checkerboard null mode. This is a discrete structural limitation, not a refutation of consistency for fixed smooth data.",
+      "smooth_sinusoid_consistency": [
+        {
+          "p": 1,
+          "points": 16,
+          "eigenvalue_error": 1.9880855962355142,
+          "previous_to_current_error_ratio": null
+        },
+        {
+          "p": 1,
+          "points": 32,
+          "eigenvalue_error": 0.5047382501362563,
+          "previous_to_current_error_ratio": 3.93884472932024
+        },
+        {
+          "p": 1,
+          "points": 64,
+          "eigenvalue_error": 0.12667187017338932,
+          "previous_to_current_error_ratio": 3.984611969850663
+        },
+        {
+          "p": 1,
+          "points": 128,
+          "eigenvalue_error": 0.031698502994323974,
+          "previous_to_current_error_ratio": 3.996146764283208
+        },
+        {
+          "p": 1,
+          "points": 256,
+          "eigenvalue_error": 0.007926535446394212,
+          "previous_to_current_error_ratio": 3.999036301382296
+        },
+        {
+          "p": 2,
+          "points": 16,
+          "eigenvalue_error": 0.06142773156879855,
+          "previous_to_current_error_ratio": null
+        },
+        {
+          "p": 2,
+          "points": 32,
+          "eigenvalue_error": 0.0038938926399580964,
+          "previous_to_current_error_ratio": 15.775404524111275
+        },
+        {
+          "p": 2,
+          "points": 64,
+          "eigenvalue_error": 0.00024421315922040776,
+          "previous_to_current_error_ratio": 15.944647095956743
+        },
+        {
+          "p": 2,
+          "points": 128,
+          "eigenvalue_error": 1.527648546328919e-05,
+          "previous_to_current_error_ratio": 15.986213570344736
+        },
+        {
+          "p": 2,
+          "points": 256,
+          "eigenvalue_error": 9.549858646096254e-07,
+          "previous_to_current_error_ratio": 15.996556629174654
+        }
+      ]
+    },
+    "positivity_assumption": {
+      "locator": "page 2 coefficient hypotheses and page 5 footnote 8",
+      "coefficient": "kappa=-1 (smooth and independent of x)",
+      "grid_points": 64,
+      "mode": 4,
+      "T": 0.001,
+      "semigroup_amplification": 1.8218369625133124,
+      "conclusion": "Contractivity requires nonnegative diffusion coefficients. This counterexample applies to the literal displayed assumptions; positivity may have been physically intended by the term thermal conductivity."
+    }
+  },
+  "all_assertions_passed": true
+}

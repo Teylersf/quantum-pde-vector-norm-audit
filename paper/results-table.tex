@@ -1,0 +1,23 @@
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{rrrrrr}
+\toprule
+$T$ & $L$ & Normalized error & Error $L/T^2$ & Comparator & Ratio \\
+\midrule
+0.0002 & 64 & 1.1426e-07 & 182.819 & 38.062 & 4.803 \\
+0.0002 & 128 & 5.7130e-08 & 182.815 & 38.062 & 4.803 \\
+0.0002 & 256 & 2.8565e-08 & 182.813 & 38.062 & 4.803 \\
+0.0002 & 512 & 1.4282e-08 & 182.812 & 38.062 & 4.803 \\
+0.0005 & 64 & 5.8357e-07 & 149.394 & 38.351 & 3.895 \\
+0.0005 & 128 & 2.9177e-07 & 149.388 & 38.351 & 3.895 \\
+0.0005 & 256 & 1.4588e-07 & 149.385 & 38.351 & 3.895 \\
+0.0005 & 512 & 7.2941e-08 & 149.383 & 38.351 & 3.895 \\
+\bottomrule\end{tabular}
+\caption{Classical normalized splitting check: $128\times128$ grid,
+$p=1$, $a=0.2$, $b=0.5$, $m=4$, using the sine variant
+$u_0=1+b\sin(2\pi m x)\sin(2\pi y)$. This has the same
+analytic norm ratio as the cosine example. The comparator reconstructs
+the printed prefactor with the initial continuum derivative norm
+and the semidiscrete final norm. Finite numerical evidence supplements,
+rather than proves, the analytic coefficient objection.}
+\end{table}
